@@ -7,7 +7,7 @@ const terminalData = {
   twitter: "https://www.x.com/JoshCowellX",
   linkedin: "https://www.linkedin.com/in/jcowell/",
   github: "https://github.com/joshatoshi/",
-  email: "mailto:admin@joshatoshi.com",
+  email: "mailto:josh@moosh.gg",
   help: [
     "",
     '<span class="command">start</span>          Initialize session',
