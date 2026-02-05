@@ -7,7 +7,7 @@ const terminalData = {
   twitter: "https://www.x.com/JoshCowellX",
   linkedin: "https://www.linkedin.com/in/jcowell/",
   github: "https://github.com/joshatoshi/",
-  email: "mailto:admin@joshatoshi.com",
+  email: "mailto:admin@moosh.gg",
   help: [
     "",
     '<span class="command">start</span>          Initialize session',
@@ -122,7 +122,7 @@ export default function Home() {
         ])
         break
       case "email":
-        setTerminalOutput([...newOutput, `Opening mailto:<a href="${terminalData.email}">admin@joshatoshi.com</a>...`])
+        setTerminalOutput([...newOutput, `Opening mailto:<a href="${terminalData.email}">admin@moosh.gg</a>...`])
         window.open(terminalData.email, "_blank")
         break
       case "clear":
@@ -237,8 +237,8 @@ export default function Home() {
     <main className="manga-container">
       {/* 4-Panel Manga Grid with Background Image */}
       <div className="manga-grid">
-        {/* Top Left - Moosh Network */}
-        <div className="manga-panel panel-moosh group">
+        {/* Top Left -  Network */}
+        <div className="manga-panel panel- group">
           {/* Manga background image - top left quadrant */}
           <div 
             className="panel-bg-image"
@@ -251,16 +251,16 @@ export default function Home() {
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
             <img 
-              src="/images/moosh.png" 
-              alt="Moosh Network" 
+              src="/images/.png" 
+              alt=" Network" 
               className="panel-logo"
             />
             <div className="panel-text">
-              <h2>MOOSH NETWORK</h2>
+              <h2> NETWORK</h2>
               <p>Peer-to-Peer Web3 Infrastructure</p>
             </div>
             <a 
-              href="https://moosh.gg" 
+              href="https://www.moosh.gg" 
               target="_blank" 
               rel="noopener noreferrer"
               className="panel-button"
@@ -294,7 +294,7 @@ export default function Home() {
               <p>Hardware Innovation</p>
             </div>
             <a 
-              href="https://fetro.com" 
+              href="https://www.fetro.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="panel-button"
@@ -440,7 +440,7 @@ export default function Home() {
                   <div className="social-icon-large">GH</div>
                   <span>GitHub</span>
                 </a>
-                <a href="mailto:admin@joshatoshi.com" className="social-link">
+                <a href="mailto:admin@moosh.gg" className="social-link">
                   <div className="social-icon-large">@</div>
                   <span>Email</span>
                 </a>
@@ -456,7 +456,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="manga-footer">
-        <p>&copy; 2024 Joshatoshi.com | ABN: 69566284905 | All Rights Reserved</p>
+        <p>&copy; 2026 Joshatoshi.com | ABN: 69566284905 | All Rights Reserved</p>
       </footer>
     </main>
   )
