@@ -294,12 +294,12 @@ export default function Home() {
               <p>Hardware Innovation</p>
             </div>
             <a 
-              href="https://www.fetro.com" 
+              href="https://www.fetro.dev" 
               target="_blank" 
               rel="noopener noreferrer"
               className="panel-button"
             >
-              Visit fetro.com
+              Visit fetro.dev
             </a>
           </div>
           <div className="panel-border" />
