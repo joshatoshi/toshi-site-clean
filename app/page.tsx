@@ -122,7 +122,7 @@ export default function Home() {
         ])
         break
       case "email":
-        setTerminalOutput([...newOutput, `Opening mailto:<a href="${terminalData.email}">admin@moosh.gg</a>...`])
+        setTerminalOutput([...newOutput, `Opening mailto:<a href="${terminalData.email}">admin@.gg</a>...`])
         window.open(terminalData.email, "_blank")
         break
       case "clear":
@@ -251,7 +251,7 @@ export default function Home() {
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
             <img 
-              src="/images/.png" 
+              src="/images/moosh.png" 
               alt=" Network" 
               className="panel-logo"
             />
