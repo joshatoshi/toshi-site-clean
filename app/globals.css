@@ -58,6 +58,10 @@ body {
   width: auto;
   height: 100%;
   object-fit: contain;
+  /* GPU acceleration for smoother animations */
+  will-change: opacity;
+  /* Optimize image rendering */
+  image-rendering: -webkit-optimize-contrast;
 }
 
 @media (max-width: 768px) {
@@ -218,6 +222,10 @@ body {
   background-repeat: no-repeat;
   background-size: 200% 200%; /* Show 1/4 of the image (2x2 grid) */
   transition: opacity 0.4s ease;
+  /* GPU acceleration for smoother hover transitions */
+  will-change: opacity;
+  /* Optimize background rendering */
+  transform: translateZ(0);
 }
 
 /* Position each panel to show its quadrant of the image */
@@ -303,6 +311,8 @@ body {
   object-fit: contain;
   position: relative;
   z-index: 2;
+  /* Prevent layout shift during image load */
+  aspect-ratio: 1 / 1;
 }
 
 .fetro-logo {

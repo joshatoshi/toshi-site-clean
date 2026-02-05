@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 
 // Terminal commands data
 const terminalData = {
@@ -211,10 +212,14 @@ export default function Home() {
           className="anime-character"
           style={{ opacity: characterOpacity }}
         >
-          <img 
+          <Image 
             src="/images/glasses.png"
             alt="Manga character pushing up glasses"
             className="character-image"
+            width={600}
+            height={600}
+            priority
+            sizes="(max-width: 768px) 80vw, 40vw"
           />
         </div>
 
@@ -251,10 +256,14 @@ export default function Home() {
           <div className="panel-white-overlay" />
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
-            <img 
+            <Image 
               src="/images/moosh.png" 
-              alt=" Moosh Network" 
+              alt="Moosh Network" 
               className="panel-logo"
+              width={120}
+              height={120}
+              loading="lazy"
+              sizes="120px"
             />
             <div className="panel-text">
               <h2> MOOSH NETWORK</h2>
@@ -285,10 +294,14 @@ export default function Home() {
           <div className="panel-white-overlay" />
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
-            <img 
+            <Image 
               src="/images/fetro.png" 
               alt="Future Retro Devices" 
               className="panel-logo fetro-logo"
+              width={120}
+              height={120}
+              loading="lazy"
+              sizes="120px"
             />
             <div className="panel-text">
               <h2>FUTURE RETRO DEVICES</h2>

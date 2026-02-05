@@ -13,6 +13,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Preload critical images for faster initial load */}
+        <link
+          rel="preload"
+          href="/images/glasses.png"
+          as="image"
+          type="image/png"
+        />
+        <link
+          rel="preload"
+          href="/images/background.png"
+          as="image"
+          type="image/png"
+        />
+      </head>
       <body>{children}</body>
     </html>
   )
