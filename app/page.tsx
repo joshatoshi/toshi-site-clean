@@ -450,10 +450,6 @@ export default function Home() {
                   <div className="social-icon-large">YT</div>
                   <span>YouTube</span>
                 </a>
-                <a href="https://github.com/joshatoshi/" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <div className="social-icon-large">GH</div>
-                  <span>GitHub</span>
-                </a>
                 <a href="mailto:admin@moosh.gg" className="social-link">
                   <div className="social-icon-large">@</div>
                   <span>Email</span>
