@@ -7,7 +7,7 @@ const terminalData = {
   twitter: "https://www.x.com/JoshCowellX",
   linkedin: "https://www.linkedin.com/in/jcowell/",
   github: "https://github.com/joshatoshi/",
-  email: "mailto:josh@moosh.gg",
+  email: "mailto:admin@moosh.gg",
   help: [
     "",
     '<span class="command">start</span>          Initialize session',
@@ -260,7 +260,7 @@ export default function Home() {
               <p>Peer-to-Peer Web3 Infrastructure</p>
             </div>
             <a
-              href="https://moosh.gg"
+              href="https://www.moosh.gg"
               target="_blank"
               rel="noopener noreferrer"
               className="panel-button"
@@ -440,7 +440,7 @@ export default function Home() {
                   <div className="social-icon-large">GH</div>
                   <span>GitHub</span>
                 </a>
-                <a href="mailto:admin@joshatoshi.com" className="social-link">
+                <a href="mailto:admin@moosh.gg" className="social-link">
                   <div className="social-icon-large">@</div>
                   <span>Email</span>
                 </a>
