@@ -123,7 +123,7 @@ export default function Home() {
         ])
         break
       case "email":
-        setTerminalOutput([...newOutput, `Opening mailto:<a href="${terminalData.email}">admin@.gg</a>...`])
+        setTerminalOutput([...newOutput, `Opening mailto:<a href="${terminalData.email}">admin@moosh.gg</a>...`])
         window.open(terminalData.email, "_blank")
         break
       case "clear":
