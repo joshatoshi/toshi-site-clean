@@ -290,7 +290,7 @@ export default function Home() {
               className="panel-logo fetro-logo"
             />
             <div className="panel-text">
-              <h2>FUTURE RETRO</h2>
+              <h2>FUTURE RETRO DEVICES</h2>
               <p>Hardware Innovation</p>
             </div>
             <a
