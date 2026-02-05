@@ -629,8 +629,8 @@ body {
 
 /* Footer */
 .manga-footer {
-  background-color: #1a1a1a;
-  color: #888;
+  background-color: transparent;
+  color: #1a1a1a;
   padding: 15px;
   text-align: center;
   font-size: 11px;
