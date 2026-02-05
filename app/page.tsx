@@ -21,10 +21,10 @@ const terminalData = {
   whois: [
     "",
     "Hello World!",
-    "Hi I am Josh.",
+    "Hi I am Joshatoshi.",
     "I believe that upgrading today's internet (Web2) requires an upgrade to Web3.",
-    "I build things.",
-    "I talk about things.",
+    "I build things. I am a maker, I love hacking hardware and software",
+    "I talk about things. I share ideas.",
     "Lot's to do, and there's not much time for sleep.",
     "Reach out to me if you'd like to know more, or need a hand!",
     "",
