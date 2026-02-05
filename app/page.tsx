@@ -31,27 +31,27 @@ const terminalData = {
   ],
   start: [
     '<span class="index">&lt;- ...Chase the white rabbit... -&gt;.</span>',
-    "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@@@@@.             .@@@@@@@@@@@@@@@.    (@@@@@@@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@@%.                  *@@@@@@@@@@@@@@/      @@@@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@                       @@@@@@@@@@@@@@@.      @@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@.                        @@@@@@@@@@@@@@@.      @@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@                         @@@@@@@@@@@@@@@@      /@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@                         @@@@@@@@@@@@@@@@      (@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@                       &@@@@@@@@@@@@@@@.      @@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@@.                    @@@@@@@@@@@@@@@@      ,@@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@@@@%               /@@@@@@@@@@@@@@@@      *@@@@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*...,#@@@@@@@@@@@@@@@@@@@.  .(@@@@@@@@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@@@@@@%,             ,#@@@@@@@@@@@@@@*****(%@@@@@@@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@@@@.                         .@@@@@@@@@.           *@@@@@@@@@@@@@",
-    "@@@@@@@@@@@@@@@                                 @@@@@@.              .@@@@@@@@@@",
-    "@@@@@@@@@@@@@                                     &@@@.                 &@@@@@@@",
-    "@@@@@@@@@@@*                                       .@@@(                 .@@@@@@",
-    "@@@@@@@@@@,                                          @@@#                  @@@@@",
-    "@@@@@@@@@&                                           #@@@                  (@@@@",
-    "@@@@@@@@@/                                            @@@.                  @@@@",
-    "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@@@@@@@@@@@@@@@&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@@@@.       .@@@@@@@@@@.   (@@@@@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@@%.          *@@@@@@@@@@/    @@@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@               @@@@@@@@@@.    @@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@.                @@@@@@@@@@.    @@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@                 @@@@@@@@@@@    /@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@                 @@@@@@@@@@@    (@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@               &@@@@@@@@@@.    @@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@@.            @@@@@@@@@@@     ,@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@@@@%        /@@@@@@@@@@@     *@@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@@@@@@@@#*.,#@@@@@@@@@@@.  .(@@@@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@@@@%,       ,#@@@@@@@@@*****(%@@@@@@@@@@@@@@@@@@@@",
+    "@@@@@@@@.               .@@@@@@.        *@@@@@@@@@@@@@@@@@",
+    "@@@@@@@                    @@@@.           .@@@@@@@@@@@@@@",
+    "@@@@@                        &@.              &@@@@@@@@@@@",
+    "@@@@* .@(              .@@@@@@@@@@",
+    "@@@,                           @#                @@@@@@@@@",
+    "@@&                            #@                (@@@@@@@@",
+    "@@/                             @.                @@@@@@@@",
+    "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
     '<span class="color2">Welcome to the Joshatoshi mainframe terminal.</span>',
     "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'help'</span><span class=\"color2\">.</span>",
   ],
@@ -68,7 +68,7 @@ export default function Home() {
   const [commandInput, setCommandInput] = useState("")
   const [commandHistory, setCommandHistory] = useState<string[]>([])
   const [historyIndex, setHistoryIndex] = useState(-1)
-  
+
   const terminalRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -202,15 +202,15 @@ export default function Home() {
   if (!showMainContent) {
     // Calculate character opacity - fades in as loading progresses
     const characterOpacity = Math.min(loadingProgress / 60, 1)
-    
+
     return (
       <div className={`loading-screen ${fadeOut ? "fade-out" : ""}`}>
         {/* Anime Character - Right side on desktop, centered on mobile */}
-        <div 
+        <div
           className="anime-character"
           style={{ opacity: characterOpacity }}
         >
-          <img 
+          <img
             src="/images/glasses.png"
             alt="Manga character pushing up glasses"
             className="character-image"
@@ -240,7 +240,7 @@ export default function Home() {
         {/* Top Left - Moosh Network */}
         <div className="manga-panel panel-moosh group">
           {/* Manga background image - top left quadrant */}
-          <div 
+          <div
             className="panel-bg-image"
             style={{
               backgroundImage: `url('/images/background.png')`
@@ -250,18 +250,18 @@ export default function Home() {
           <div className="panel-white-overlay" />
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
-            <img 
-              src="/images/moosh.png" 
-              alt="Moosh Network" 
+            <img
+              src="/images/moosh.png"
+              alt="Moosh Network"
               className="panel-logo"
             />
             <div className="panel-text">
               <h2>MOOSH NETWORK</h2>
               <p>Peer-to-Peer Web3 Infrastructure</p>
             </div>
-            <a 
-              href="https://moosh.gg" 
-              target="_blank" 
+            <a
+              href="https://moosh.gg"
+              target="_blank"
               rel="noopener noreferrer"
               className="panel-button"
             >
@@ -274,7 +274,7 @@ export default function Home() {
         {/* Top Right - Future Retro Devices */}
         <div className="manga-panel panel-fetro group">
           {/* Manga background image - top right quadrant */}
-          <div 
+          <div
             className="panel-bg-image"
             style={{
               backgroundImage: `url('/images/background.png')`
@@ -284,18 +284,18 @@ export default function Home() {
           <div className="panel-white-overlay" />
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
-            <img 
-              src="/images/fetro.png" 
-              alt="Future Retro Devices" 
+            <img
+              src="/images/fetro.png"
+              alt="Future Retro Devices"
               className="panel-logo fetro-logo"
             />
             <div className="panel-text">
               <h2>FUTURE RETRO</h2>
               <p>Hardware Innovation</p>
             </div>
-            <a 
-              href="https://fetro.com" 
-              target="_blank" 
+            <a
+              href="https://www.fetro.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="panel-button"
             >
@@ -308,7 +308,7 @@ export default function Home() {
         {/* Bottom Left - About/Mainframe */}
         <div className="manga-panel panel-about group">
           {/* Manga background image - bottom left quadrant */}
-          <div 
+          <div
             className="panel-bg-image"
             style={{
               backgroundImage: `url('/images/background.png')`
@@ -325,7 +325,7 @@ export default function Home() {
               <h2>MAINFRAME</h2>
               <p>Access Terminal</p>
             </div>
-            <button 
+            <button
               onClick={() => setActiveModal("about")}
               className="panel-button"
             >
@@ -338,7 +338,7 @@ export default function Home() {
         {/* Bottom Right - Socials */}
         <div className="manga-panel panel-socials group">
           {/* Manga background image - bottom right quadrant */}
-          <div 
+          <div
             className="panel-bg-image"
             style={{
               backgroundImage: `url('/images/background.png')`
@@ -357,7 +357,7 @@ export default function Home() {
               <h2>CONNECT</h2>
               <p>Social Links</p>
             </div>
-            <button 
+            <button
               onClick={() => setActiveModal("socials")}
               className="panel-button"
             >
@@ -456,7 +456,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="manga-footer">
-        <p>&copy; 2024 Joshatoshi.com | ABN: 69566284905 | All Rights Reserved</p>
+        <p>&copy; 2026 Joshatoshi.com | ABN: 69566284905 | All Rights Reserved</p>
       </footer>
     </main>
   )
