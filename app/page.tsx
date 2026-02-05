@@ -253,11 +253,11 @@ export default function Home() {
           <div className="panel-hover-content">
             <img 
               src="/images/moosh.png" 
-              alt=" Network" 
+              alt=" Moosh Network" 
               className="panel-logo"
             />
             <div className="panel-text">
-              <h2> NETWORK</h2>
+              <h2> MOOSH NETWORK</h2>
               <p>Peer-to-Peer Web3 Infrastructure</p>
             </div>
             <a 
@@ -291,7 +291,7 @@ export default function Home() {
               className="panel-logo fetro-logo"
             />
             <div className="panel-text">
-              <h2>FUTURE RETRO</h2>
+              <h2>FUTURE RETRO DEVICES</h2>
               <p>Hardware Innovation</p>
             </div>
             <a 
