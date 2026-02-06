@@ -70,9 +70,12 @@ export default function Home() {
   const [commandInput, setCommandInput] = useState("")
   const [commandHistory, setCommandHistory] = useState<string[]>([])
   const [historyIndex, setHistoryIndex] = useState(-1)
+  const [activePanelIndex, setActivePanelIndex] = useState(0)
+  const [showHintTab, setShowHintTab] = useState(true)
   
   const terminalRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+  const panelRefs = useRef<(HTMLDivElement | null)[]>([])
 
   // Loading animation
   useEffect(() => {
@@ -187,6 +190,47 @@ export default function Home() {
     }
   }
 
+  // IntersectionObserver for mobile hint tab
+  useEffect(() => {
+    if (!showMainContent || !showHintTab) return
+    
+    const isMobile = window.matchMedia("(max-width: 768px)").matches
+    if (!isMobile) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Find the topmost visible panel
+        let topmostIndex = -1
+        let topmostTop = Infinity
+
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = panelRefs.current.indexOf(entry.target as HTMLDivElement)
+            const rect = entry.boundingClientRect
+            if (rect.top < topmostTop) {
+              topmostTop = rect.top
+              topmostIndex = index
+            }
+          }
+        })
+
+        if (topmostIndex !== -1) {
+          setActivePanelIndex(topmostIndex)
+        }
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "-10% 0px -60% 0px",
+      }
+    )
+
+    panelRefs.current.forEach((panel) => {
+      if (panel) observer.observe(panel)
+    })
+
+    return () => observer.disconnect()
+  }, [showMainContent, showHintTab])
+
   // Auto-scroll terminal
   useEffect(() => {
     if (terminalRef.current) {
@@ -243,8 +287,8 @@ export default function Home() {
     <main className="manga-container">
       {/* 4-Panel Manga Grid with Background Image */}
       <div className="manga-grid">
-        {/* Top Left -  Network */}
-        <div className="manga-panel panel- group">
+        {/* Top Left - Moosh Network */}
+        <div className="manga-panel panel-moosh group" ref={(el) => { panelRefs.current[0] = el }} onClick={() => setShowHintTab(false)}>
           {/* Manga background image - top left quadrant */}
           <div 
             className="panel-bg-image"
@@ -279,10 +323,15 @@ export default function Home() {
             </a>
           </div>
           <div className="panel-border" />
+          {showHintTab && activePanelIndex === 0 && (
+            <div className="mobile-hint-tab" aria-label="Tap to interact">
+              <span className="hint-tab-text">TAP</span>
+            </div>
+          )}
         </div>
 
         {/* Top Right - Future Retro Devices */}
-        <div className="manga-panel panel-fetro group">
+        <div className="manga-panel panel-fetro group" ref={(el) => { panelRefs.current[1] = el }} onClick={() => setShowHintTab(false)}>
           {/* Manga background image - top right quadrant */}
           <div 
             className="panel-bg-image"
@@ -317,10 +366,15 @@ export default function Home() {
             </a>
           </div>
           <div className="panel-border" />
+          {showHintTab && activePanelIndex === 1 && (
+            <div className="mobile-hint-tab" aria-label="Tap to interact">
+              <span className="hint-tab-text">TAP</span>
+            </div>
+          )}
         </div>
 
         {/* Bottom Left - About/Mainframe */}
-        <div className="manga-panel panel-about group">
+        <div className="manga-panel panel-about group" ref={(el) => { panelRefs.current[2] = el }} onClick={() => setShowHintTab(false)}>
           {/* Manga background image - bottom left quadrant */}
           <div 
             className="panel-bg-image"
@@ -347,10 +401,15 @@ export default function Home() {
             </button>
           </div>
           <div className="panel-border" />
+          {showHintTab && activePanelIndex === 2 && (
+            <div className="mobile-hint-tab" aria-label="Tap to interact">
+              <span className="hint-tab-text">TAP</span>
+            </div>
+          )}
         </div>
 
         {/* Bottom Right - Socials */}
-        <div className="manga-panel panel-socials group">
+        <div className="manga-panel panel-socials group" ref={(el) => { panelRefs.current[3] = el }} onClick={() => setShowHintTab(false)}>
           {/* Manga background image - bottom right quadrant */}
           <div 
             className="panel-bg-image"
@@ -379,9 +438,14 @@ export default function Home() {
             </button>
           </div>
           <div className="panel-border" />
+          {showHintTab && activePanelIndex === 3 && (
+            <div className="mobile-hint-tab" aria-label="Tap to interact">
+              <span className="hint-tab-text">TAP</span>
+            </div>
+          )}
         </div>
       </div>
-
+      
       {/* About/Mainframe Modal */}
       {activeModal === "about" && (
         <div className="modal-overlay" onClick={() => setActiveModal(null)}>
