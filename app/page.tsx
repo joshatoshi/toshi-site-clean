@@ -6,7 +6,7 @@ import Image from "next/image"
 // Terminal commands data
 const terminalData = {
   twitter: "https://www.x.com/JoshCowellX",
-  linkedin: "https://www.linkedin.com/in/jcowell/",
+  linkedin: "https://www.linkedin.com/in/joshatoshi/",
   github: "https://github.com/joshatoshi/",
   email: "mailto:admin@moosh.gg",
   help: [
@@ -121,7 +121,7 @@ export default function Home() {
           ...newOutput,
           "",
           `twitter/X ::click me:: --->     <a href="${terminalData.twitter}" target="_blank">twitter/JoshCowellX</a>`,
-          `linkedin  ::click me:: --->     <a href="${terminalData.linkedin}" target="_blank">linkedin/jcowell</a>`,
+          `linkedin  ::click me:: --->     <a href="${terminalData.linkedin}" target="_blank">linkedin/joshatoshi</a>`,
           `github    ::click me:: --->     <a href="${terminalData.github}" target="_blank">github/joshatoshi</a>`,
           "",
         ])
@@ -502,7 +502,7 @@ export default function Home() {
             <div className="modal-body">
               <h2 className="socials-title">Connect With Me</h2>
               <div className="social-links-grid">
-                <a href="https://www.linkedin.com/in/jcowell/" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://www.linkedin.com/in/joshatoshi/" target="_blank" rel="noopener noreferrer" className="social-link">
                   <div className="social-icon-large">in</div>
                   <span>LinkedIn</span>
                 </a>
