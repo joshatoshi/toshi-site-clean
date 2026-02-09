@@ -7,7 +7,6 @@ import Image from "next/image"
 const terminalData = {
   twitter: "https://www.x.com/JoshCowellX",
   linkedin: "https://www.linkedin.com/in/joshatoshi/",
-  github: "https://github.com/joshatoshi/",
   email: "mailto:admin@moosh.gg",
   help: [
     "",
@@ -72,7 +71,7 @@ export default function Home() {
   const [historyIndex, setHistoryIndex] = useState(-1)
   const [activePanelIndex, setActivePanelIndex] = useState(0)
   const [showHintTab, setShowHintTab] = useState(true)
-  
+
   const terminalRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const panelRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -122,8 +121,6 @@ export default function Home() {
           "",
           `twitter/X ::click me:: --->     <a href="${terminalData.twitter}" target="_blank">twitter/JoshCowellX</a>`,
           `linkedin  ::click me:: --->     <a href="${terminalData.linkedin}" target="_blank">linkedin/joshatoshi</a>`,
-          `github    ::click me:: --->     <a href="${terminalData.github}" target="_blank">github/joshatoshi</a>`,
-          "",
         ])
         break
       case "email":
@@ -141,10 +138,7 @@ export default function Home() {
         setTerminalOutput([...newOutput, "Opening LinkedIn..."])
         window.open(terminalData.linkedin, "_blank")
         break
-      case "github":
-        setTerminalOutput([...newOutput, "Opening GitHub..."])
-        window.open(terminalData.github, "_blank")
-        break
+
       case "sudo":
         setTerminalOutput([...newOutput, "There is no second best..."])
         setTimeout(() => {
@@ -193,7 +187,7 @@ export default function Home() {
   // IntersectionObserver for mobile hint tab
   useEffect(() => {
     if (!showMainContent || !showHintTab) return
-    
+
     const isMobile = window.matchMedia("(max-width: 768px)").matches
     if (!isMobile) return
 
@@ -248,15 +242,15 @@ export default function Home() {
   if (!showMainContent) {
     // Calculate character opacity - fades in as loading progresses
     const characterOpacity = Math.min(loadingProgress / 60, 1)
-    
+
     return (
       <div className={`loading-screen ${fadeOut ? "fade-out" : ""}`}>
         {/* Anime Character - Right side on desktop, centered on mobile */}
-        <div 
+        <div
           className="anime-character"
           style={{ opacity: characterOpacity }}
         >
-          <Image 
+          <Image
             src="/images/glasses.png"
             alt="Manga character pushing up glasses"
             className="character-image"
@@ -290,7 +284,7 @@ export default function Home() {
         {/* Top Left - Moosh Network */}
         <div className="manga-panel panel-moosh group" ref={(el) => { panelRefs.current[0] = el }} onClick={() => setShowHintTab(false)}>
           {/* Manga background image - top left quadrant */}
-          <div 
+          <div
             className="panel-bg-image"
             style={{
               backgroundImage: `url('/images/background.png')`
@@ -300,9 +294,9 @@ export default function Home() {
           <div className="panel-white-overlay" />
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
-            <Image 
-              src="/images/moosh.png" 
-              alt="Moosh Network" 
+            <Image
+              src="/images/moosh.png"
+              alt="Moosh Network"
               className="panel-logo"
               width={120}
               height={120}
@@ -313,9 +307,9 @@ export default function Home() {
               <h2> MOOSH NETWORK</h2>
               <p>Peer-to-Peer Web3 Infrastructure</p>
             </div>
-            <a 
-              href="https://www.moosh.gg" 
-              target="_blank" 
+            <a
+              href="https://www.moosh.gg"
+              target="_blank"
               rel="noopener noreferrer"
               className="panel-button"
             >
@@ -333,7 +327,7 @@ export default function Home() {
         {/* Top Right - Future Retro Devices */}
         <div className="manga-panel panel-fetro group" ref={(el) => { panelRefs.current[1] = el }} onClick={() => setShowHintTab(false)}>
           {/* Manga background image - top right quadrant */}
-          <div 
+          <div
             className="panel-bg-image"
             style={{
               backgroundImage: `url('/images/background.png')`
@@ -343,9 +337,9 @@ export default function Home() {
           <div className="panel-white-overlay" />
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
-            <Image 
-              src="/images/fetro.png" 
-              alt="Future Retro Devices" 
+            <Image
+              src="/images/fetro.png"
+              alt="Future Retro Devices"
               className="panel-logo fetro-logo"
               width={120}
               height={120}
@@ -356,9 +350,9 @@ export default function Home() {
               <h2>FUTURE RETRO DEVICES</h2>
               <p>Hardware Innovation</p>
             </div>
-            <a 
-              href="https://www.fetro.dev" 
-              target="_blank" 
+            <a
+              href="https://www.fetro.dev"
+              target="_blank"
               rel="noopener noreferrer"
               className="panel-button"
             >
@@ -376,7 +370,7 @@ export default function Home() {
         {/* Bottom Left - About/Mainframe */}
         <div className="manga-panel panel-about group" ref={(el) => { panelRefs.current[2] = el }} onClick={() => setShowHintTab(false)}>
           {/* Manga background image - bottom left quadrant */}
-          <div 
+          <div
             className="panel-bg-image"
             style={{
               backgroundImage: `url('/images/background.png')`
@@ -393,7 +387,7 @@ export default function Home() {
               <h2>MAINFRAME</h2>
               <p>Access Terminal</p>
             </div>
-            <button 
+            <button
               onClick={() => setActiveModal("about")}
               className="panel-button"
             >
@@ -411,7 +405,7 @@ export default function Home() {
         {/* Bottom Right - Socials */}
         <div className="manga-panel panel-socials group" ref={(el) => { panelRefs.current[3] = el }} onClick={() => setShowHintTab(false)}>
           {/* Manga background image - bottom right quadrant */}
-          <div 
+          <div
             className="panel-bg-image"
             style={{
               backgroundImage: `url('/images/background.png')`
@@ -430,7 +424,7 @@ export default function Home() {
               <h2>CONNECT</h2>
               <p>Social Links</p>
             </div>
-            <button 
+            <button
               onClick={() => setActiveModal("socials")}
               className="panel-button"
             >
@@ -445,7 +439,7 @@ export default function Home() {
           )}
         </div>
       </div>
-      
+
       {/* About/Mainframe Modal */}
       {activeModal === "about" && (
         <div className="modal-overlay" onClick={() => setActiveModal(null)}>
