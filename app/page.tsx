@@ -294,25 +294,25 @@ export default function Home() {
           {/* Content that appears on hover */}
           <div className="panel-hover-content">
             <Image
-              src="/images/moosh.png"
-              alt="Moosh Network"
-              className="panel-logo"
+              src="/images/proto_shot.png"
+              alt="CAIM1 CAD prototype"
+              className="panel-logo caim1-logo"
               width={120}
               height={120}
               loading="lazy"
               sizes="120px"
             />
             <div className="panel-text">
-              <h2> MOOSH NETWORK</h2>
-              <p>Peer-to-Peer Web3 Infrastructure</p>
+              <h2>CAIM1</h2>
+              <p>Shoot AI-Proof Digital Media</p>
             </div>
             <a
-              href="https://www.moosh.gg"
+              href="https://caimera.one"
               target="_blank"
               rel="noopener noreferrer"
               className="panel-button"
             >
-              Visit moosh.gg
+              Visit caimera.one
             </a>
           </div>
           <div className="panel-border" />
