@@ -304,7 +304,7 @@ export default function Home() {
             />
             <div className="panel-text">
               <h2>CAIM1</h2>
-              <p>Create AI-Proof Digital Media</p>
+              <p>Shoot AI-Proof Digital Media</p>
             </div>
             <a
               href="https://caimera.one"
