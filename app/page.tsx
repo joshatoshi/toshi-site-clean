@@ -5,7 +5,7 @@ import Image from "next/image"
 
 // Terminal commands data
 const terminalData = {
-  twitter: "https://www.x.com/JoshCowellX",
+  twitter: "https://www.x.com/JoshatoshiOnX",
   linkedin: "https://www.linkedin.com/in/joshatoshi/",
   email: "mailto:admin@moosh.gg",
   help: [
@@ -500,7 +500,7 @@ export default function Home() {
                   <div className="social-icon-large">in</div>
                   <span>LinkedIn</span>
                 </a>
-                <a href="https://x.com/joshcowellx" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://x.com/JoshatoshiOnX" target="_blank" rel="noopener noreferrer" className="social-link">
                   <div className="social-icon-large">X</div>
                   <span>Twitter/X</span>
                 </a>
