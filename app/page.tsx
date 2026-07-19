@@ -7,7 +7,7 @@ import Image from "next/image"
 const terminalData = {
   twitter: "https://www.x.com/JoshatoshiOnX",
   linkedin: "https://www.linkedin.com/in/joshatoshi/",
-  email: "mailto:admin@moosh.gg",
+  email: "mailto:hello@caimera.xyz",
   help: [
     "",
     '<span class="command">start</span>          Initialize session',
@@ -511,7 +511,7 @@ export default function Home() {
                   <div className="social-icon-large">@</div>
                   <span>Email</span>
                 </a>
-                <a href="https://www.moosh.gg" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://www.blog.moosh.gg" target="_blank" rel="noopener noreferrer" className="social-link">
                   <div className="social-icon-large">M</div>
                   <span>Moosh</span>
                 </a>
