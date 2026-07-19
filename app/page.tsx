@@ -511,7 +511,7 @@ export default function Home() {
                   <div className="social-icon-large">@</div>
                   <span>Email</span>
                 </a>
-                <a href="https://www.blog.moosh.gg" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://blog.moosh.gg/" target="_blank" rel="noopener noreferrer" className="social-link">
                   <div className="social-icon-large">M</div>
                   <span>Moosh</span>
                 </a>
