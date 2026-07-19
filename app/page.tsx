@@ -507,11 +507,11 @@ export default function Home() {
                   <div className="social-icon-large">YT</div>
                   <span>YouTube</span>
                 </a>
-                <a href="mailto:admin@moosh.gg" className="social-link">
+                <a href="mailto:hello@caimera.xyz" className="social-link">
                   <div className="social-icon-large">@</div>
                   <span>Email</span>
                 </a>
-                <a href="https://www.blog.moosh.gg" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://blog.moosh.gg/" target="_blank" rel="noopener noreferrer" className="social-link">
                   <div className="social-icon-large">M</div>
                   <span>Moosh</span>
                 </a>
