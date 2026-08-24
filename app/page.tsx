@@ -549,7 +549,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="manga-footer">
-        <p>&copy; 2026 Joshatoshi.com | ABN: 69566284905 | All Rights Reserved</p>
+        <p>&copy; 2026 Joshatoshi.com | All Rights Reserved</p>
       </footer>
     </main>
   )
