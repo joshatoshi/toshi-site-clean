@@ -22,7 +22,7 @@ const terminalData = {
     "",
     "Hello World!",
     "Hi I am Joshatoshi.",
-    "15 years of product and consulting experience across corporate financial services and technology startups. Extensive product & project management, modelling, advisory, and strategic experience.  Passionate about frontier tech.",
+    "15 years of product and consulting experience across corporate financial services, fintech, and technology startups. Extensive product & project management, modelling, advisory, and strategic experience.  Passionate about frontier tech.",
     "I build things, hardware and software.",
     "I lead projects, develop advanced strategies, and manage teams.",
     "I talk about things on global stages and small gatherings alike. I love to share ideas.",
